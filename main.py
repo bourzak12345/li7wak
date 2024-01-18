@@ -73,4 +73,4 @@ async def help(ctx):
 
 
 my_secret = os.environ['TOKEN']
-bot.run(my_secret)
+bot.run('MTE4Mjc5MTI5Nzk1ODk1Mjk4Mw.GdAn0m.4_NbM70tpaBiFKbWNJdBVAHE7WJldC9tV9D5rU')

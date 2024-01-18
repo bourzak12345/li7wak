@@ -1,18 +1,20 @@
-from flask import Flask
+from flask import Flask, render_template
 from threading import Thread
 
-app = Flask('')
-
+app = Flask(name)
 
 @app.route('/')
-def home():
-  return "Bot is alive!"
-
+def index():
+    return '''<body style="margin: 0; padding: 0;">
+    <iframe width="100%" height="100%" src="https://axocoder.vercel.app/" frameborder="0" allowfullscreen></iframe>
+  </body>'''
 
 def run():
-  app.run(host="0.0.0.0", port=8080)
-
+    app.run(host='0.0.0.0', port=8080)
 
 def keep_alive():
-  t = Thread(target=run)
-  t.start()
+    t = Thread(target=run)
+    t.start()
+
+keep_alive()
+print("Server Running Because of Axo")
